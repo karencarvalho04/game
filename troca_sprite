@@ -1,0 +1,53 @@
+Ir para conteúdo principal
+
+Trocar sprites (animação de movimento)
+
+KAREN ANDRESSA DE CARVALHO
+programa
+{
+//importar as bibliotecas gráficos e teclado
+
+    inclua biblioteca Graficos --> g
+    inclua biblioteca Teclado --> t
+
+// criar variáveis para armazenar as imagens
+    
+    inteiro frente_andando_1 = g.carregar_imagem("guerreiro_frente_1.png")
+    inteiro frente_andando_2 = g.carregar_imagem("guerreiro_frente_2.png")
+    
+
+//criar variáveis com a posição x e y inicial do personagem    
+
+    inteiro xplayer = 100
+    inteiro yplayer = 100
+
+//criar variável para definir o estado do personagem
+    inteiro sprite_atual = frente_andando_1
+
+
+// função início para inserir animação de movimento (troca de sprites)
+    funcao trocar_sprite(){
+        se(t.tecla_pressionada(t.TECLA_S)){
+            se(sprite_atual == frente_andando_1){
+                sprite_atual = frente_andando_2
+
+u.aguarde(200)
+
+    }senao{
+        sprite_atual = frente_andando_1
+
+         u.aguarde(200)
+            }
+        }
+
+g.desenhar_imagem(xplayer, yplayer, sprite_atual)
+    }
+
+}
+
+Página Inicial
+
+Trocar sprites (animação de movimento)
+Comentário
+A página será salva a cada cinco segundos.
+Novo link adicionado. Você pode editar a URL, o título ou a imagem na caixa de ferramentas que está aberta.Republicando…RepublicadaA página Trocar sprites (animação de movimento) está carregada.
